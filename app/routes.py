@@ -4,6 +4,7 @@ import hmac
 import hashlib
 import os
 
+
 @app.route('/')
 @app.route('/about')
 def about():
