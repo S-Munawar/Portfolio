@@ -1,12 +1,11 @@
 'use client'
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Home from '@/components/Home';
 import TechStack from '@/components/TechStack';
 import Projects from '@/components/Projects';
-import SpotlightBackground from '@/components/Mesh'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -34,7 +33,7 @@ export default function LandingPage() {
                 anticipatePin: 1,
             }
     })
-    .addLabel('homeEnd')    
+    masterTl.addLabel('homeEnd')    
     .to(homeRef.current, {y: viewportHeight}, 'homeEnd+=0.2')
 
     .fromTo(projectRef.current, {y: -viewportHeight}, {y: 0}, 'homeEnd+=0.2')
@@ -58,12 +57,12 @@ export default function LandingPage() {
     
 
     {/* Projects */}
-    <section ref={projectRef} className="absolute z-20 inset-0 w-full h-screen overflow-hidden">
+    <section ref={projectRef} className="absolute z-20 inset-0 w-full h-screen overflow-hidden" style={{transform: 'translateY(-100vh)'}}>
       <Projects />
     </section>
 
     {/* Tech Stack */}
-    <section ref={techRef} className="absolute z-30 inset-0 w-full h-screen overflow-hidden">
+    <section ref={techRef} className="absolute z-30 inset-0 w-full h-screen overflow-hidden" style={{transform: 'translateY(-100vh)'}}>
       <TechStack />
     </section>
     </div>

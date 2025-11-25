@@ -39,42 +39,42 @@ const Contact = () => {
           {/* Single Column Layout */}
           <div className="space-y-8">
             
-            {/* Email Me Section */}
+            {/* Social Media & Other Channels */}
             <div className="bg-surface-2 p-6 rounded-lg">
               <h2 className="font-extrabold text-2xl font-doto text-foreground mb-4">Social Media & Other Channels</h2>
               <p className="text-secondary mb-6">Please feel free to contact me to discuss further details, or if you have an offer or idea for collaboration. You can use any of the following channels to get in touch with me.</p>
               
               {/* Contact Links */}
-              <div className="flex justify-center flex-wrap gap-3 text-foreground-2 font-extrabold font-sans">
-                <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=shaikmunawar907@gmail.com" className="flex items-center gap-3 px-4 py-2 bg-accent-blue rounded-sm hover:opacity-90 transition-opacity text-sm">
-                  <div className="w-10 h-10 flex items-center justify-center bg-foreground-3 rounded-sm">
-                    <Mail className="w-5 h-5 text-foreground-2" />
+              <div className="flex justify-center flex-wrap gap-2 sm:gap-3 md:gap-4 text-foreground-2 font-extrabold font-sans">
+                <Link href="https://mail.google.com/mail/?view=cm&fs=1&to=shaikmunawar907@gmail.com" className="flex items-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-4 py-2 bg-accent-blue rounded-sm hover:opacity-90 transition-opacity text-xs sm:text-sm">
+                  <div className="w-6 h-6 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center bg-foreground-3 rounded-sm">
+                    <Mail className="w-3 h-3 sm:w-5 sm:h-5 text-foreground-2" />
                   </div>
-                  <span>Email</span>
+                  <span className="hidden sm:inline">Email</span>
                 </Link>
-                <Link href="https://linkedin.com/in/shaik-abdul-munawar-b35821284" target="_blank" className="flex items-center gap-3 px-4 py-2 bg-accent-blue rounded-sm hover:opacity-90 transition-opacity text-sm">
-                  <div className="w-10 h-10 flex items-center justify-center bg-foreground-3 rounded-sm">
-                    <Image src={socialIcons.LinkedIn} alt="LinkedIn" width={20} height={20} className="w-5 h-5" />
+                <Link href="https://linkedin.com/in/shaik-abdul-munawar-b35821284" target="_blank" className="flex items-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-4 py-2 bg-accent-blue rounded-sm hover:opacity-90 transition-opacity text-xs sm:text-sm">
+                  <div className="w-6 h-6 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center bg-foreground-3 rounded-sm">
+                    <Image src={socialIcons.LinkedIn} alt="LinkedIn" width={20} height={20} className="w-3 h-3 sm:w-5 sm:h-5" />
                   </div>
-                  <span>LinkedIn</span>
+                  <span className="hidden sm:inline">LinkedIn</span>
                 </Link>
-                <Link href="https://github.com/S-Munawar" target="_blank" className="flex items-center gap-3 px-4 py-2 bg-accent-blue rounded-sm hover:opacity-90 transition-opacity text-sm">
-                  <div className="w-10 h-10 flex items-center justify-center bg-foreground-3 rounded-sm">
-                    <Image src={socialIcons.GitHub} alt="GitHub" width={20} height={20} className="w-5 h-5" />
+                <Link href="https://github.com/S-Munawar" target="_blank" className="flex items-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-4 py-2 bg-accent-blue rounded-sm hover:opacity-90 transition-opacity text-xs sm:text-sm">
+                  <div className="w-6 h-6 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center bg-foreground-3 rounded-sm">
+                    <Image src={socialIcons.GitHub} alt="GitHub" width={20} height={20} className="w-3 h-3 sm:w-5 sm:h-5" />
                   </div>
-                  <span>GitHub</span>
+                  <span className="hidden sm:inline">GitHub</span>
                 </Link>
-                <Link href="https://leetcode.com/Shaik_Munawar" target="_blank" className="flex items-center gap-3 px-4 py-2 bg-accent-blue rounded-sm hover:opacity-90 transition-opacity text-sm">
-                  <div className="w-10 h-10 flex items-center justify-center bg-foreground-3 rounded-sm">
-                    <Image src={socialIcons.LeetCode} alt="LeetCode" width={20} height={20} className="w-5 h-5" />
+                <Link href="https://leetcode.com/Shaik_Munawar" target="_blank" className="flex items-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-4 py-2 bg-accent-blue rounded-sm hover:opacity-90 transition-opacity text-xs sm:text-sm">
+                  <div className="w-6 h-6 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center bg-foreground-3 rounded-sm">
+                    <Image src={socialIcons.LeetCode} alt="LeetCode" width={20} height={20} className="w-3 h-3 sm:w-5 sm:h-5" />
                   </div>
-                  <span>LeetCode</span>
+                  <span className="hidden sm:inline">LeetCode</span>
                 </Link>
-                <Link href="tel:+916303774539" className="flex items-center gap-3 px-4 py-2 bg-accent-blue rounded-sm hover:opacity-90 transition-opacity text-sm">
-                  <div className="w-10 h-10 flex items-center justify-center bg-foreground-3 rounded-sm">
-                    <Phone className="w-5 h-5 text-foreground-2" />
+                <Link href="tel:+916303774539" className="flex items-center gap-2 sm:gap-3 px-2 sm:px-3 md:px-4 py-2 bg-accent-blue rounded-sm hover:opacity-90 transition-opacity text-xs sm:text-sm">
+                  <div className="w-6 h-6 sm:w-9 sm:h-9 md:w-10 md:h-10 flex items-center justify-center bg-foreground-3 rounded-sm">
+                    <Phone className="w-3 h-3 sm:w-5 sm:h-5 text-foreground-2" />
                   </div>
-                  <span>Phone</span>
+                  <span className="hidden sm:inline">Phone</span>
                 </Link>
               </div>
             </div>
