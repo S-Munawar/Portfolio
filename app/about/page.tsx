@@ -1,6 +1,5 @@
-import React from 'react'
 import Image from 'next/image'
-import { techIcons } from '@/lib/constants'
+import { techIcons, techCategories } from '@/lib/constants'
 
 const About = () => {
   return (
@@ -69,12 +68,12 @@ const About = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-3">Programming Languages</h4>
                     <div className="border-l-4 border-accent-orange pl-4 flex flex-wrap gap-3">
-                      {['JavaScript', 'TypeScript', 'Python', 'Java'].map((skill) => (
+                      {[...techCategories.Languages, 'JavaScript', 'TypeScript'].map((skill) => (
                         <div key={skill} className="flex items-center gap-2 bg-accent-orange text-foreground-2 px-3 py-2 rounded-sm text-sm">
                           <div className="bg-foreground-3 p-1 rounded-sm">
                             <Image src={techIcons[skill]} alt={skill} width={16} height={16} className="w-4 h-4" />
                           </div>
-                          <span>{skill}</span>
+                          <span className="hidden sm:inline">{skill}</span>
                         </div>
                       ))}
                     </div>
@@ -83,12 +82,12 @@ const About = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-3">Frameworks & Libraries</h4>
                     <div className="border-l-4 border-accent-orange pl-4 flex flex-wrap gap-3">
-                      {['React', 'Next.js', 'Node.js', 'Express', 'Flask'].map((skill) => (
+                      {[...techCategories.Frontend, ...techCategories.Backend].map((skill) => (
                         <div key={skill} className="flex items-center gap-2 bg-accent-orange text-foreground-2 px-3 py-2 rounded-sm text-sm">
                           <div className="bg-foreground-3 p-1 rounded-sm">
                             <Image src={techIcons[skill]} alt={skill} width={16} height={16} className="w-4 h-4" />
                           </div>
-                          <span>{skill}</span>
+                          <span className="hidden sm:inline">{skill}</span>
                         </div>
                       ))}
                     </div>
@@ -97,12 +96,12 @@ const About = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-3">Tools & Platforms</h4>
                     <div className="border-l-4 border-accent-orange pl-4 flex flex-wrap gap-3">
-                      {['MongoDB', 'PostgreSQL', 'Docker', 'AWS', 'Git'].map((skill) => (
+                      {[...techCategories.Database, ...techCategories.DevOps].map((skill) => (
                         <div key={skill} className="flex items-center gap-2 bg-accent-orange text-foreground-2 px-3 py-2 rounded-sm text-sm">
                           <div className="bg-foreground-3 p-1 rounded-sm">
                             <Image src={techIcons[skill]} alt={skill} width={16} height={16} className="w-4 h-4" />
                           </div>
-                          <span>{skill}</span>
+                          <span className="hidden sm:inline">{skill}</span>
                         </div>
                       ))}
                     </div>
@@ -122,7 +121,7 @@ const About = () => {
                           <div className="bg-foreground-3 p-1 rounded-sm w-6 h-6 flex items-center justify-center text-xs font-bold">
                             {skill.charAt(0)}
                           </div>
-                          <span>{skill}</span>
+                          <span >{skill}</span>
                         </div>
                       ))}
                     </div>
