@@ -149,6 +149,17 @@ export  const techCategories = {
         // 'Tools': ['Prisma', 'Jest', 'Cypress']
     };
 
+export const languages: string[] = [
+  'English',
+  'Hindi',
+];
+
+export const otherSkills: string[] = [
+  'Problem Solving',
+  'Team Collaboration',
+  'Project Management',
+];
+
 // Social media and developer profile icon mapping
 export const socialIcons: { [key: string]: string } = {
   // 💼 Developer Profiles

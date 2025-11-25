@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { techIcons, techCategories } from '@/lib/constants'
+import { techIcons, techCategories, otherSkills, languages } from '@/lib/constants'
 
 const About = () => {
   return (
@@ -116,7 +116,7 @@ const About = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-3">Languages</h4>
                     <div className="border-l-4 border-accent-orange pl-4 flex flex-wrap gap-3">
-                      {['English', 'Hindi'].map((skill) => (
+                      {languages.map((skill) => (
                         <div key={skill} className="flex items-center gap-2 bg-accent-orange text-foreground-2 px-3 py-2 rounded-sm text-sm">
                           <div className="bg-foreground-3 p-1 rounded-sm w-6 h-6 flex items-center justify-center text-xs font-bold">
                             {skill.charAt(0)}
@@ -129,7 +129,7 @@ const About = () => {
                   <div>
                     <h4 className="font-semibold text-foreground mb-3">Other</h4>
                     <div className="border-l-4 border-accent-orange pl-4 flex flex-wrap gap-3">
-                      {['Problem Solving', 'Team Collaboration', 'Project Management', 'UI/UX Design'].map((skill) => (
+                      {otherSkills.map((skill) => (
                         <div key={skill} className="flex items-center gap-2 bg-accent-orange text-foreground-2 px-3 py-2 rounded-sm text-sm">
                           <div className="bg-foreground-3 p-1 rounded-sm w-6 h-6 flex items-center justify-center text-xs font-bold">
                             {skill.charAt(0)}
