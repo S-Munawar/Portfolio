@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
+import NavBar from "@/components/NavBar";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Doto } from 'next/font/google';
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
+const doto = Doto({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  variable: '--font-doto', // css variable
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +35,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider>
+          <NavBar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
