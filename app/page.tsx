@@ -37,13 +37,13 @@ export default function LandingPage() {
             }
     })
     masterTl.addLabel('homeEnd')    
-    .to(homeRef.current, {y: viewportHeight}, 'homeEnd+=0.2')
+    .to(homeRef.current, {y: viewportHeight + 100}, 'homeEnd+=0.2')
 
-    .fromTo(projectRef.current, {y: viewportHeight}, {y: 0}, 'homeEnd+=0.2')
+    .fromTo(projectRef.current, {y: viewportHeight + 100}, {y: 0}, 'homeEnd+=0.2')
     .addLabel('projectEnd')
-    .to(projectRef.current, {y: viewportHeight}, 'projectEnd+=0.2)')
+    .to(projectRef.current, {y: viewportHeight + 100}, 'projectEnd+=0.2)')
 
-    .fromTo(techRef.current, {y: viewportHeight}, {y: 0}, 'projectEnd+=0.2')
+    .fromTo(techRef.current, {y: viewportHeight + 100}, {y: 0}, 'projectEnd+=0.2')
     .addLabel('techEnd')
   }, [])
 
