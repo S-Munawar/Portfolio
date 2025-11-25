@@ -22,6 +22,9 @@ export default function LandingPage() {
   useGSAP(() => {
 
     const viewportHeight = window.innerHeight
+    // const isMobile = window.innerWidth < 768
+    // const slideDirection = isMobile ? viewportHeight : -viewportHeight
+    
     // Master timeline
     const masterTl = gsap.timeline({
             scrollTrigger: {
@@ -36,11 +39,11 @@ export default function LandingPage() {
     masterTl.addLabel('homeEnd')    
     .to(homeRef.current, {y: viewportHeight}, 'homeEnd+=0.2')
 
-    .fromTo(projectRef.current, {y: -viewportHeight}, {y: 0}, 'homeEnd+=0.2')
+    .fromTo(projectRef.current, {y: viewportHeight}, {y: 0}, 'homeEnd+=0.2')
     .addLabel('projectEnd')
     .to(projectRef.current, {y: viewportHeight}, 'projectEnd+=0.2)')
 
-    .fromTo(techRef.current, {y: -viewportHeight}, {y: 0}, 'projectEnd+=0.2')
+    .fromTo(techRef.current, {y: viewportHeight}, {y: 0}, 'projectEnd+=0.2')
     .addLabel('techEnd')
   }, [])
 
@@ -57,12 +60,12 @@ export default function LandingPage() {
     
 
     {/* Projects */}
-    <section ref={projectRef} className="absolute z-20 inset-0 w-full h-screen overflow-hidden" style={{transform: 'translateY(-100vh)'}}>
+    <section ref={projectRef} className="absolute z-20 inset-0 w-full h-screen overflow-hidden">
       <Projects />
     </section>
 
     {/* Tech Stack */}
-    <section ref={techRef} className="absolute z-30 inset-0 w-full h-screen overflow-hidden" style={{transform: 'translateY(-100vh)'}}>
+    <section ref={techRef} className="absolute z-30 inset-0 w-full h-screen overflow-hidden">
       <TechStack />
     </section>
     </div>
