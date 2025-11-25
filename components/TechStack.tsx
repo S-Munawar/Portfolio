@@ -1,51 +1,51 @@
 import React from 'react';
 import Image from 'next/image';
-import { useRouter } from "next/navigation";
-import { projectData } from '../lib/constants';
+import { techIcons, techCategories } from '@/lib/constants';
 
-const Projects = () => {
-  const router = useRouter();
-    // Function to handle the click (simulating navigation to a dynamic page)
-    const handleProjectClick = (projectId: number) => {
-        router.push(`/projects/${projectId}`);
-    };
+const TechStack = () => {
 
     return (
-        // Main container (h-screen ensures there is space for the floating div)
-        <div className="relative z-0 flex items-center justify-center h-screen bg-accent-orange">
+        // Main container
+        <div className="relative z-0 flex items-center justify-center min-h-screen bg-accent-orange py-16 sm:py-20 px-2 sm:px-4">
             
-            {/* 🌟 Floating Projects Container */}
+            {/* Tech Stack Container */}
             <div className="
-                absolute
                 flex flex-col items-center 
-                bg-surface p-12 mt-4 rounded-xl shadow-2xl 
+                bg-surface p-4 sm:p-6 md:p-8 rounded-xl shadow-2xl 
                 h-[70vh] w-[85%] overflow-auto scrollbar-hide 
             ">
-                <h1 className="text-4xl font-extrabold text-foreground mb-8 font-gorgia">Projects</h1>
+                <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-foreground mb-6 sm:mb-8 font-gorgia text-center">Tech Stack</h1>
                 
-                {/* 📏 Grid Layout for Projects (6 divs) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full h-full">
-                    {projectData.map((project) => (
-                        // 👇 Project Card Div (Clickable)
-                        <div 
-                            key={project.id}
-                            onClick={() => handleProjectClick(project.id)}
-                            className="
-                                h-64 p-6 bg-surface-2 rounded-lg shadow-md 
-                                hover:bg-accent-orange hover:shadow-lg 
-                                transition duration-300 ease-in-out 
-                                cursor-pointer 
-                                flex flex-col justify-between
-                                border-t-4 border-accent-orange text-accent-orange hover:text-foreground-2
-                            "
-                        >
-                            <h2 className="text-xl font-semibold mb-2">
-                                {project.title}
+                {/* Tech Categories Grid */}
+                <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 sm:gap-6 md:gap-8 w-full">
+                    {Object.entries(techCategories).map(([category, technologies]) => (
+                        <div key={category} className="bg-surface-2 p-4 sm:p-6 rounded-lg">
+                            <h2 className="font-extrabold text-lg sm:text-xl md:text-2xl font-doto text-foreground mb-3 sm:mb-4 border-b-2 border-accent-orange pb-2">
+                                {category}
                             </h2>
-                            <p className="text-secondary grow">
-                                {project.description}
-                            </p>
-                            <Image src={project.img} alt={project.title} width={250} height={200} className="mt-4 rounded-md" />
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-3">
+                                {technologies.map((tech) => (
+                                    <div 
+                                        key={tech}
+                                        className="
+                                            flex flex-col items-center justify-center p-1.5 sm:p-2 bg-accent-orange text-white rounded-lg
+                                            hover:scale-105 transition-transform duration-200
+                                            shadow-md hover:shadow-lg aspect-square
+                                        "
+                                    >
+                                        <div className="bg-white p-0.5 rounded-sm mb-1 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 xl:w-12 xl:h-12 flex items-center justify-center">
+                                            <Image 
+                                                src={techIcons[tech]} 
+                                                alt={tech} 
+                                                width={24} 
+                                                height={24} 
+                                                className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-9 lg:h-9 xl:w-10 xl:h-10 object-contain" 
+                                            />
+                                        </div>
+                                        <span className="text-xs font-normal text-center leading-tight">{tech}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -54,4 +54,4 @@ const Projects = () => {
     );
 }
 
-export default Projects;
+export default TechStack;

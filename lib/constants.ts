@@ -28,8 +28,8 @@ export const projectData = [
     scope: 'Full Stack',
     team: 'Solo Developer & Project Owner',
     link: 'https://quickgpt-demo.vercel.app',
-    code: 'https://quick-gpt-1-six.vercel.app',
-    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'NextAuth.js', 'OpenAI API', 'Vercel'],
+    code: 'https://github.com/S-Munawar/QuickGPT',
+    tech: ['Express', 'React', 'TypeScript', 'Tailwind', 'MongoDB', 'NextAuth.js', 'ImageKit API', 'OpenAI API', 'Vercel'],
     brief: 'A modern, secure, and responsive AI chatbot application built on the Next.js framework, providing real-time interactions powered by the OpenAI API.',
     features: {
       '1': 'Secure user authentication and authorization via NextAuth.js.',
@@ -49,7 +49,7 @@ export const projectData = [
     team: 'Solo Developer & Project Owner',
     link: 'https://stockmarket-app.vercel.app',
     code: 'https://stock-market-gules.vercel.app',
-    tech: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'PostgreSQL', 'NextAuth.js', 'Vercel'],
+    tech: ['Next.js', 'TypeScript', 'Tailwind', 'NextAuth.js', 'Vercel'],
     brief: 'A simulated stock trading platform designed to track real-time stock data and manage virtual portfolios, emphasizing clean architecture and secure data handling.',
     features: {
       '1': 'Real-time stock price fetching and charting (using a financial API).',
@@ -68,8 +68,8 @@ export const projectData = [
     scope: 'Frontend',
     team: 'Solo Developer & Project Owner',
     link: 'https://resume-analyzer.vercel.app',
-    code: 'https://resume-analyzer-six-nu.vercel.app',
-    tech: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    code: 'https://github.com/S-Munawar/Resume-Analyzer',
+    tech: ['React', 'TypeScript', 'Tailwind', 'Vercel'],
     brief: 'A client-side tool built to analyze resume structure and content against best practices, providing immediate feedback on formatting, keyword density, and overall readability.',
     features: {
       '1': 'File upload and parsing capability (e.g., PDF/DOCX to text).',
@@ -97,7 +97,7 @@ export const techIcons: { [key: string]: string } = {
   'Vue.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg',
   'HTML5': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg',
   'CSS3': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg',
-  'Tailwind CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+  'Tailwind': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
   'Sass/SCSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg',
   
   // ⚙️ Backend Frameworks
@@ -136,4 +136,35 @@ export const techIcons: { [key: string]: string } = {
   'OpenAI API': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openapi/openapi-original.svg',
   'Jest': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg',
   'Cypress': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cypressio/cypressio-original.svg',
+};
+
+// Tech categories for TechStack component
+export  const techCategories = {
+        'Frontend': ['React', 'Next.js', 'JavaScript', 'TypeScript', 'Tailwind'],
+        'Backend': ['Node.js', 'Express', 'Flask'],
+        'Database': ['MongoDB', 'PostgreSQL', 'MySQL'],
+        'DevOps': ['Docker', 'AWS', 'Git', 'Vercel'],
+        'Languages': ['Python', 'Java'],
+        // 'Machine Learning': ['NumPy', 'Scikit-learn', 'Pandas', 'TensorFlow'],
+        // 'Tools': ['Prisma', 'Jest', 'Cypress']
+    };
+
+// Social media and developer profile icon mapping
+export const socialIcons: { [key: string]: string } = {
+  // 💼 Developer Profiles
+  'GitHub': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg',
+  'LinkedIn': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg',
+  'LeetCode': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/leetcode/leetcode-original.svg',
+  'StackOverflow': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/stackoverflow/stackoverflow-original.svg',
+  
+  // 🐦 General Social Media (Optional)
+  'Twitter/X': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg',
+  'Medium': 'https://cdn.simpleicons.org/medium/000000',
+  'Dev.to': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devto/devto-original.svg',
+  'YouTube': 'https://cdn.simpleicons.org/youtube/FF0000',
+  'Instagram': 'https://cdn.simpleicons.org/instagram/E4405F',
+  
+  // 📧 Contact
+  'Email': 'https://cdn.simpleicons.org/gmail/EA4335',
+  'Phone': 'https://cdn.simpleicons.org/phone/000000',
 };

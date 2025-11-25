@@ -18,7 +18,7 @@ const Projects = () => {
             <div className="
                 absolute
                 flex flex-col items-center 
-                bg-surface p-12 mt-4 rounded-xl shadow-2xl 
+                bg-surface p-12 mt-4 rounded-lg shadow-2xl 
                 h-[70vh] w-[85%] overflow-auto scrollbar-hide 
             ">
                 <h1 className="text-4xl font-extrabold text-foreground mb-8 font-gorgia">Projects</h1>
@@ -36,13 +36,13 @@ const Projects = () => {
                                 transition duration-300 ease-in-out 
                                 cursor-pointer 
                                 flex flex-col justify-between
-                                border-t-4 border-accent-yellow text-accent-yellow hover:text-foreground-2
+                                border-t-4 border-accent-yellow text-accent-yellow hover:text-foreground-2 group
                             "
                         >
                             <h2 className="font-extrabold text-xl font-doto mb-2">
                                 {project.title}
                             </h2>
-                            <p className="text-secondary grow">
+                            <p className="text-secondary grow group-hover:text-foreground-2 transition duration-300 ease-in-out">
                                 {project.description}
                             </p>
                             <Image src={project.img} alt={project.title} width={250} height={200} className="mt-4 rounded-md" />

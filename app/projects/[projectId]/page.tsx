@@ -47,17 +47,19 @@ const page = async ({params}: {params: Promise<{projectId: string}>}) => {
                                 <h3 className="font-extrabold text-2xl font-doto text-foreground mb-3">Technologies Used</h3>
                                 <div className="flex flex-wrap gap-2">
                                     {project?.tech?.map((technology, index) => (
-                                        <span key={index} className="bg-accent-orange text-foreground-3 px-2 py-1 rounded-full text-sm flex items-center gap-2">
+                                        <span key={index} className="bg-accent-orange text-foreground-2 px-2 py-1 rounded-full text-sm flex items-center gap-2">
                                             {techIcons[technology] ? (
-                                                <span><Image 
+                                                <span className="w-8 h-8 flex items-center justify-center bg-foreground-3 rounded-l-full rounded-tr-full z-10">
+                                                    <Image 
                                                     src={techIcons[technology]} 
                                                     alt={technology} 
                                                     width={16} 
                                                     height={16} 
-                                                    className="w-6 h-6 bg-foreground-3 rounded-full"
+                                                    className='w-6 h-6 rounded-full'
+                                                    
                                                 /></span>
                                             ) : (
-                                                <span>⚡</span>
+                                                <span className="w-8 h-8 flex items-center justify-center bg-foreground-3 rounded-l-full rounded-tr-full z-10">⚡</span>
                                             )}
                                             <span>{technology}</span>
                                         </span>
@@ -67,10 +69,10 @@ const page = async ({params}: {params: Promise<{projectId: string}>}) => {
                             
                             {/* Links */}
                             <div className="flex gap-4">
-                                <Link href={project?.link || '#'} target="_blank" className="bg-accent-blue text-white px-4 py-2 rounded hover:opacity-90 transition-opacity">
+                                <Link href={project?.link || '#'} target="_blank" className="bg-accent-blue text-foreground-3 px-4 py-2 rounded hover:opacity-90 transition-opacity">
                                     View Project
                                 </Link>
-                                <Link href={project?.code || '#'} target="_blank" className="bg-accent-red text-white px-4 py-2 rounded hover:opacity-90 transition-opacity">
+                                <Link href={project?.code || '#'} target="_blank" className="bg-accent-red text-foreground-3 px-4 py-2 rounded hover:opacity-90 transition-opacity">
                                     Source Code
                                 </Link>
                             </div>
