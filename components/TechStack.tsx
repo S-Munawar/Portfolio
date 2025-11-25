@@ -28,7 +28,7 @@ const TechStack = () => {
                                     <div 
                                         key={tech}
                                         className="
-                                            flex flex-col items-center justify-center p-1.5 sm:p-2 bg-accent-orange text-white rounded-lg
+                                            flex flex-col items-center justify-center p-1.5 sm:p-2 bg-glass text-white rounded-lg
                                             hover:scale-105 transition-transform duration-200
                                             shadow-md hover:shadow-lg aspect-square
                                         "
