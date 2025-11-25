@@ -21,7 +21,7 @@ const About = () => {
             
             {/* Introduction */}
             <div className="bg-surface-2 p-6 rounded-lg">
-              <h2 className="font-extrabold text-2xl font-doto text-foreground mb-4">Hello! I'm Shaik Munawar, a passionate developer.</h2>
+              <h2 className="font-extrabold text-2xl font-doto text-foreground mb-4">Hello! I&apos;m Shaik Munawar, a passionate developer.</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
                 <div className="bg-accent-blue text-foreground-3 p-4 rounded-sm">
                   <h3 className="font-bold text-lg">Age</h3>
@@ -43,7 +43,7 @@ const About = () => {
               <h2 className="font-extrabold text-2xl font-doto text-foreground mb-4">About Me</h2>
               <div className="space-y-4 text-secondary leading-relaxed">
                 <p>
-                  I'm a passionate full-stack developer specializing in the MERN stack with a strong foundation in modern web technologies. 
+                  I&apos;m a passionate full-stack developer specializing in the MERN stack with a strong foundation in modern web technologies. 
                   I enjoy creating efficient, scalable solutions and have experience working with various frameworks and tools.
                 </p>
                 <p>
@@ -51,8 +51,8 @@ const About = () => {
                   This led me to explore various programming languages and frameworks, ultimately finding my passion in full-stack development.
                 </p>
                 <p>
-                  I'm always eager to learn new technologies and take on challenging projects that push my skills to the next level. 
-                  When I'm not coding, I enjoy solving algorithmic problems and contributing to open-source projects.
+                  I&apos;m always eager to learn new technologies and take on challenging projects that push my skills to the next level. 
+                  When I&apos;m not coding, I enjoy solving algorithmic problems and contributing to open-source projects.
                 </p>
               </div>
             </div>
@@ -251,7 +251,7 @@ const About = () => {
                           <p className="text-secondary">2024 – 2025</p>
                           <div className="text-secondary text-sm space-y-1 mt-2">
                             <p>• Led a 5+ member tech team and conducted workshops like AI Unlocked and Hello World.</p>
-                            <p>• Organized high-impact technical events and contributed to growing ACM's tech ecosystem.</p>
+                            <p>• Organized high-impact technical events and contributed to growing ACM&apos;s tech ecosystem.</p>
                           </div>
                         </div>
                       </div>
