@@ -7,7 +7,7 @@ export const projectData = [
     year: '2024',
     scope: 'Full Stack',
     team: 'Solo Developer & Project Owner',
-    link: 'https://petcare-web-1-0.onrender.com',
+    link: 'https://pet-care-azrv.onrender.com',
     code: 'https://github.com/S-Munawar/Pet-Care',
     tech: ['Flask', 'Python', 'NumPy', 'Scikit-learn', 'JavaScript', 'MongoDB', 'Docker', 'AWS'],
     brief: 'A comprehensive web platform designed to help pet owners monitor and manage their pets\' health, leveraging machine learning to predict potential health issues based on input symptoms and behavioral data.',
